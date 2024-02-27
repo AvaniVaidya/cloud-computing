@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  slack-chatbot:
+    lang: python
+    handler: ./slack-chatbot
+    image: avaidya2/slack-chatbot
+    environment:
+      content_type: text/plain 
+
